@@ -43,13 +43,8 @@ def sendEmail():
 def openWEB(cmnd):
     cmnd = cmnd.lower()
     s = cmnd.find("open") + 5
-    return cmnd[s:]
-
-
-
-
-
-
+    url = "www." + cmnd[s:] + ".com"
+    webbrowser.open(url)
 
 
 
@@ -63,8 +58,12 @@ while True:
         speak("ok")
         break
     elif "open" in query:
-        speak("open")
+        speak("on it")
         print(openWEB(query))
+    elif "who is" in query:
+        speak("searching")
+
+
 
 
 # def main():
